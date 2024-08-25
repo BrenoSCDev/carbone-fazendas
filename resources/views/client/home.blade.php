@@ -1,0 +1,4 @@
+{{$empresa}}
+{{$home}}
+{{$sobrenos}}
+{{$contato}}
