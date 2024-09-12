@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    height: 100%;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%; /* Garante que o elemento ocupe pelo menos a altura do conteúdo */
+    height: 100%; /* Certifica-se de que o elemento se expanda se o conteúdo crescer */
+    background-image: url('../img/sobrenos.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+
+.background-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-logo-display {
+    height: 200px;
+}
+
+    @media (max-width: 900px) {
+    .img-logo-display {
+        height: 150px;
+    }
+}
+
+    @media (max-width: 500px) {
+    .img-logo-display {
+        height: 110px;
+    }
+}
+
+    @media (max-width: 400px) {
+    .img-logo-display {
+        height: 80px;
+    }
+}

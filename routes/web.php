@@ -63,3 +63,6 @@ Route::get('/cidades/getByUf/{uf}', [IBGEController::class, 'getByUf'])->name('i
 // ---------------------------------------------------------------------------------------------------------------------------------------
 
 Route::get('/{emp}', [ClientViewController::class, 'home'])->name('home');
+Route::get('/{emp}/sobrenos', [ClientViewController::class, 'sobrenos'])->name('sobrenos');
+Route::get('/{emp}/contato', [ClientViewController::class, 'contato'])->name('contato');
+Route::get('/{emp}/fazendas', [ClientViewController::class, 'fazendas'])->name('fazendas');

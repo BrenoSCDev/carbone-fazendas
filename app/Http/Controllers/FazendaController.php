@@ -60,7 +60,7 @@ class FazendaController extends Controller
 
     public function doEdit(Fazenda $fazenda, Request $request)
     {
-        dd($request);
+        // dd($request);
         $fazenda->nome = $request->nome;
         $fazenda->uf = $request->uf;
         $fazenda->cidade = $request->cidade;

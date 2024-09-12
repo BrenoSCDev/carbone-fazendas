@@ -30,7 +30,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($fazendas as $fazenda)  
+                    @foreach ($fazendas as $fazenda)
                       <tr>
                         <td>
                           <div class="d-flex px-2 py-1">
@@ -38,7 +38,11 @@
                               <img src="{{ url("storage/images/{$fazenda->capa}") }}" class="avatar avatar-sm me-3" alt="user1">
                             </div>
                             <div class="d-flex flex-column justify-content-center">
-                              <h6 class="mb-0 text-sm">{{ $fazenda->nome }}</h6>
+                              <h6 class="mb-0 text-sm">{{ $fazenda->nome }}
+                                @if ($fazenda->destaque === 1)
+                                  <i class="fas fa-star"></i>
+                                @endif
+                              </h6>
                               <p class="text-xs text-secondary mb-0">{{ $fazenda->uf . " " . "-" . " " . $fazenda->cidade }}</p>
                             </div>
                           </div>
